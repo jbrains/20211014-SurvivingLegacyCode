@@ -1,0 +1,12 @@
+# Build output
+target/
+
+# Legacy reports
+Metrics
+
+# IntelliJ IDEA
+.idea
+
+# Eclipse
+.classpath
+.project
