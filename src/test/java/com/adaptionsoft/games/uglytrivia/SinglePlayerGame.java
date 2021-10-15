@@ -1,11 +1,11 @@
 package com.adaptionsoft.games.uglytrivia;
 
-public class TestableGame extends Game {
-    public TestableGame() {
+public class SinglePlayerGame extends Game {
+    public SinglePlayerGame() {
         this(0);
     }
 
-    public TestableGame(int startingPlaceForFirstPlayer) {
+    public SinglePlayerGame(int startingPlaceForFirstPlayer) {
         add("::player 1::");
         super.places[super.currentPlayer] = startingPlaceForFirstPlayer;
     }
