@@ -20,20 +20,14 @@ public class Game {
     boolean isGettingOutOfPenaltyBox;
 
     public Game() {
-        for (int i = 0; i < 50; i++) {
-            popQuestions.addLast("Pop Question " + i);
-            scienceQuestions.addLast(("Science Question " + i));
-            sportsQuestions.addLast(("Sports Question " + i));
-            rockQuestions.addLast(createRockQuestion(i));
-        }
-
-        reportMessage = new ReportMessage() {
+        this(new ReportMessage() {
             @Override
             public void reportMessage(String message) {
                 System.out.println(message);
             }
-        };
+        });
     }
+
     public Game(ReportMessage reportMessage) {
         this.reportMessage = reportMessage;
 
