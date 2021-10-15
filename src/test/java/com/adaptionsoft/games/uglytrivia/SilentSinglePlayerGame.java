@@ -1,11 +1,11 @@
 package com.adaptionsoft.games.uglytrivia;
 
-public class SinglePlayerGame extends Game {
-    public SinglePlayerGame() {
+public class SilentSinglePlayerGame extends Game {
+    public SilentSinglePlayerGame() {
         this(0);
     }
 
-    public SinglePlayerGame(int startingPlaceForFirstPlayer) {
+    public SilentSinglePlayerGame(int startingPlaceForFirstPlayer) {
         super(new ReportMessage() {
             @Override
             public void reportMessage(String message) {
