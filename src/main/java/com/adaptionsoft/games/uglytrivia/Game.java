@@ -4,12 +4,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class Game {
-    private final ReportMessage reportMessage = new ReportMessage() {
-        @Override
-        public void reportMessage(String message) {
-            System.out.println(message);
-        }
-    };
+    private final ReportMessage reportMessage;
 
     ArrayList players = new ArrayList();
     int[] places = new int[6];
@@ -31,6 +26,13 @@ public class Game {
             sportsQuestions.addLast(("Sports Question " + i));
             rockQuestions.addLast(createRockQuestion(i));
         }
+
+        reportMessage = new ReportMessage() {
+            @Override
+            public void reportMessage(String message) {
+                System.out.println(message);
+            }
+        };
     }
 
     public String createRockQuestion(int index) {
