@@ -81,16 +81,16 @@ public class Game {
 			places[currentPlayer] = places[currentPlayer] + roll;
 			if (places[currentPlayer] > 11) places[currentPlayer] = places[currentPlayer] - 12;
 			
-			System.out.println(players.get(currentPlayer) 
+			reportMessage(players.get(currentPlayer)
 					+ "'s new location is " 
 					+ places[currentPlayer]);
-			System.out.println("The category is " + currentCategory());
+			reportMessage("The category is " + currentCategory());
 			askQuestion();
 		}
 		
 	}
 
-	private void askQuestion() {
+	protected void askQuestion() {
 		if (currentCategory() == "Pop")
 			System.out.println(popQuestions.removeFirst());
 		if (currentCategory() == "Science")

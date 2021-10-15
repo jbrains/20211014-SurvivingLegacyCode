@@ -11,6 +11,11 @@ public class RollOneDieTest {
             protected void reportMessage(String message) {
                 // Intentionally do nothing
             }
+
+            @Override
+            protected void askQuestion() {
+                // Intentionally do nothing
+            }
         };
         game.add("::player 1::");
         game.roll(4);
