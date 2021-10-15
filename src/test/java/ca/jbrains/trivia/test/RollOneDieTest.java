@@ -7,7 +7,11 @@ import org.junit.Test;
 public class RollOneDieTest {
     @Test
     public void currentPlayerMovesCorrectly_Four() {
-        TestableGame game = new TestableGame();
+        TestableGame game = new TestableGame() {
+            {
+                super.places[super.currentPlayer] = 0;
+            }
+        };
         game.add("::player 1::");
         game.roll(4);
         Assert.assertEquals(4, game.getPlaceOfCurrentPlayer());
