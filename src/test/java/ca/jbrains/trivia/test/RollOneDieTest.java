@@ -20,4 +20,12 @@ public class RollOneDieTest {
         game.roll(11);
         Assert.assertEquals(11, game.getPlaceOfCurrentPlayer());
     }
+
+    @Test
+    public void currentPlayerMovesCorrectly_AroundTheBoard() {
+        TestableGame game = new TestableGame();
+        game.add("::player 1::");
+        game.roll(12);
+        Assert.assertEquals(0, game.getPlaceOfCurrentPlayer());
+    }
 }
