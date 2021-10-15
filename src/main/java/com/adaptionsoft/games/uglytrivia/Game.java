@@ -4,6 +4,13 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class Game {
+    private final ReportMessage reportMessage = new ReportMessage() {
+        @Override
+        public void reportMessage(String message) {
+            System.out.println(message);
+        }
+    };
+
     ArrayList players = new ArrayList();
     int[] places = new int[6];
     int[] purses = new int[6];
@@ -48,12 +55,7 @@ public class Game {
     }
 
     protected void reportMessage(String message) {
-        new ReportMessage() {
-            @Override
-            public void reportMessage(String message) {
-                System.out.println(message);
-            }
-        }.reportMessage(message);
+        reportMessage.reportMessage(message);
     }
 
     public int howManyPlayers() {
