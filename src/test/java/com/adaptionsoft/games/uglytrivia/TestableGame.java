@@ -6,6 +6,7 @@ public class TestableGame extends Game {
     }
 
     public TestableGame(int startingPlaceForFirstPlayer) {
+        add("::player 1::");
         super.places[super.currentPlayer] = startingPlaceForFirstPlayer;
     }
 
