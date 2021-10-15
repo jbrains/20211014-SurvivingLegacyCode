@@ -1,6 +1,7 @@
 package ca.jbrains.trivia.test;
 
-import com.adaptionsoft.games.uglytrivia.Game;
+import com.adaptionsoft.games.uglytrivia.TestableGame;
+import org.junit.Assert;
 import org.junit.Test;
 
 public class RollOneDieTest {
@@ -9,17 +10,6 @@ public class RollOneDieTest {
         TestableGame game = new TestableGame();
         game.add("::player 1::");
         game.roll(4);
-    }
-
-    private static class TestableGame extends Game {
-        @Override
-        protected void reportMessage(String message) {
-            // Intentionally do nothing
-        }
-
-        @Override
-        protected void askQuestion() {
-            // Intentionally do nothing
-        }
+        Assert.assertEquals(4, game.getPlaceOfCurrentPlayer());
     }
 }
