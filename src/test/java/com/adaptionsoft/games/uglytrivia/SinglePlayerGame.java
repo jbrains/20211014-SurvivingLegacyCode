@@ -1,6 +1,6 @@
 package com.adaptionsoft.games.uglytrivia;
 
-public class SinglePlayerGame extends Game {
+public class SinglePlayerGame extends Game implements ReportMessage {
     public SinglePlayerGame() {
         this(0);
     }
@@ -11,7 +11,7 @@ public class SinglePlayerGame extends Game {
     }
 
     @Override
-    protected void reportMessage(String message) {
+    public void reportMessage(String message) {
         // Intentionally do nothing
     }
 
