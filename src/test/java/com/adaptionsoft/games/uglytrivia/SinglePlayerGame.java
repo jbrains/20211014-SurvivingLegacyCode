@@ -1,18 +1,19 @@
 package com.adaptionsoft.games.uglytrivia;
 
-public class SinglePlayerGame extends Game implements ReportMessage {
+public class SinglePlayerGame extends Game {
     public SinglePlayerGame() {
         this(0);
     }
 
     public SinglePlayerGame(int startingPlaceForFirstPlayer) {
+        super(new ReportMessage() {
+            @Override
+            public void reportMessage(String message) {
+                // Intetionally do nothing
+            }
+        });
         add("::player 1::");
         super.places[super.currentPlayer] = startingPlaceForFirstPlayer;
-    }
-
-    @Override
-    public void reportMessage(String message) {
-        // Intentionally do nothing
     }
 
     @Override
