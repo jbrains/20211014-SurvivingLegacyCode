@@ -6,7 +6,7 @@ import org.junit.Test;
 
 public class RollOneDieTest {
     @Test
-    public void iDoNotKnowYet() {
+    public void currentPlayerMovesCorrectly() {
         TestableGame game = new TestableGame();
         game.add("::player 1::");
         game.roll(4);
